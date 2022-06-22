@@ -1,0 +1,30 @@
+POST http://localhost:4002/products
+content-type: application/json
+
+{
+     "name" :   "Estojo Colorido  " ,
+     "price"  : 6.99
+}
+
+###
+//Busca os produtos já listados em memoria 
+GET http://localhost:4002/products
+
+
+###
+//Pra retorno do ID basta inserir o Id que esteja em memoria
+GET http://localhost:4002/products/31699c37-f744-448f-93f4-8e12af5cc65b
+
+###
+//Atualiza pelo ID usando o parâmetro
+PUT http://localhost:4002/products/a9197789-41bc-4c0d-920c-a63915792069
+content-type: application/json
+
+{
+     "name" :   "Paleta de Cores" ,
+     "price"  : 17.17
+}
+
+//Delete o produto pelo ID 
+###
+DELETE http://localhost:4002/products/09391b4d-1e7c-4f42-8c6c-1a0bb0e88beb
